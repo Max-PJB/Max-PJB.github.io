@@ -48,16 +48,17 @@ head: # 删改前确定知道自己在做什么
     value: profile
   - key: href
     value: //gmpg.org/xfn/11
-- tag: link # rss
-  var:
-  - key: rel
-    value: alternate
-  - key: href
-    value: /atom.xml
-  - key: title
-    value: RSS
-  - key: type
-    value: application/rss+xml
+# 我擦，我哪里来的 rss
+#- tag: link # rss
+#  var:
+#  - key: rel
+#    value: alternate
+#  - key: href
+#    value: /atom.xml
+#  - key: title
+#    value: RSS
+#  - key: type
+#    value: application/rss+xml
 - tag: link # 网站大图标，我偷懒直接用gravatar了，也可以存在/public里面
   var:
   - key: rel
