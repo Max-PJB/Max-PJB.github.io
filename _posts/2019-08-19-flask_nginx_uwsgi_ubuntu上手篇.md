@@ -1,6 +1,6 @@
 ---
-title: flask 部署 nginx uwsgi ubuntu supervisor，初稿，后面再深入的时候再完善吧
-categories: 
+title: flask 部署 nginx uwsgi ubuntu supervisor，-上手篇
+categories:
   - flask
   - python
   - nginx
@@ -52,7 +52,7 @@ if __name__ == '__main__':
     sys.exit(__main__._main())
 ```
 
-我们这里只使用 virtualenv，后面环境多了，可以考虑加入 virtualenvwrapper 
+我们这里只使用 virtualenv，后面环境多了，可以考虑加入 virtualenvwrapper
 
 virtualenv是虚拟环境，virtualenvwrapper对virtualenv的命令进行了封装，使得其更加友好，对多个环境集中管理。
 
@@ -66,7 +66,7 @@ sudo pip3 install virtualenv  # 安装virtualenv
 创建、启用、退出、删除 虚拟环境
 
 ```shell
-# 指定python版本，否则就是使用默认的系统 python版本 
+# 指定python版本，否则就是使用默认的系统 python版本
 virtualenv --no-site-packages --python=3.6.8 my_python # 会在当前创建一个 my_python 目录
 # --no-site-packages 表示不继承系统python的包，若想包括系统的site-packages，可以使用 --system-site-packages
 source my_python/bin/activate # 进入虚拟环境
@@ -96,7 +96,7 @@ pip3 install uwsgi
 
 ```python
 from flask import Flask
-  
+
 app = Flask(__name__)
 
 @app.route('/')
@@ -153,7 +153,7 @@ sudo nginx -s reload
 安装完成后默认的nginx的配置文件位于`/etc/nginx/sites-enabled/default`
 其实nginx默认读取的文件是`/etc/nginx/nginx.conf`，打开这个文件看看可以看到在其http块中有些
 
-```        
+```
 include /etc/nginx/conf.d/*.conf;
 include /etc/nginx/sites-enabled/*;
 ```
@@ -219,7 +219,7 @@ sudo supervisorctl shutdown # 会关闭supervisor进程和其管理的子进程
 (lemong-server) ubuntu@VM-0-9-ubuntu:~/test$ ps -aux|grep uwsgi
 ubuntu   19201  4.0  2.7  95296 27592 ?        S    15:29   0:00 /home/ubuntu/lemong-server/bin/uwsgi --ini /home/ubuntu/test/uwsgi.ini
 ubuntu   19210  0.0  0.1  13772  1036 pts/0    S+   15:29   0:00 grep --color=auto uwsgi
-(lemong-server) ubuntu@VM-0-9-ubuntu:~/test$ pkill -f -9 uwsgi 
+(lemong-server) ubuntu@VM-0-9-ubuntu:~/test$ pkill -f -9 uwsgi
 (lemong-server) ubuntu@VM-0-9-ubuntu:~/test$ ps -aux|grep uwsgi
 ubuntu   19214  8.0  2.7  95296 27648 ?        S    15:29   0:00 /home/ubuntu/lemong-server/bin/uwsgi --ini /home/ubuntu/test/uwsgi.ini
 ubuntu   19223  0.0  0.1  13772  1016 pts/0    S+   15:29   0:00 grep --color=auto uwsgi
