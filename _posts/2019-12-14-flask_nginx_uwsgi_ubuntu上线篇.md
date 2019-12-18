@@ -20,7 +20,7 @@ tags:
 安装virtualenv `sudo pip3 install virtualenv`
 
 创建、启用、退出、删除 虚拟环境
-```shell script
+```shell
 # 指定python版本，否则就是使用默认的系统 python版本
 virtualenv --no-site-packages --python=3.6.8 my_python # 会在当前创建一个 my_python 目录
 # --no-site-packages 表示不继承系统python的包，若想包括系统的site-packages，可以使用 --system-site-packages
@@ -43,10 +43,10 @@ rm -r my_python # 删除环境直接把目录删了就好了，Linux 万物皆�
 > 我这里是以 create_app() 来写的 flask 应用，废话不多说，看图
 
 `/app/init.py`
-![](../public/img/2019-12-14-1.png)
+![](/public/img/2019-12-14-1.png)
 
 `run.py`
-![](../public/img/2019-12-14-2.png)
+![](/public/img/2019-12-14-2.png)
 
 整个项目从github上拉取下来，放在目录 `/home/ubuntu/workspace/shop_pc_server`
 ### uwsgi 配置
@@ -54,7 +54,7 @@ rm -r my_python # 删除环境直接把目录删了就好了，Linux 万物皆�
 
 > 有蛮多坑的，比如不加 pythonpath，导致错误 `from app import create_app ModuleNotFoundError: No module named 'app'`
 
-```shell script
+```shell
 [uwsgi]
 # 使用nginx连接时使用socket通信
 # socket = 127.0.0.1:5055
@@ -90,11 +90,11 @@ post-buffering = 8192
 
 user 处是因为我的用户名是 ubuntu，万恶的腾讯云
 
-```shell script
+```shell
+
 [program:shop_pc_server]
 user=ubuntu
 command = /home/ubuntu/python-envs/shop_pc_server/bin/uwsgi --ini /home/ubuntu/workspace/shop_pc_server/uwsgi.ini
-
 
 autostart=true
 autorestart=true
@@ -104,10 +104,11 @@ redirect_stderr=true
 stdout_logfile=/var/log/uwsgi/supervisor_shop_pc_server.log
 stderr_logfile=/var/log/uwsgi/supervisor_shop_pc_server_error.log
 ```
+
 在相应的目录下创建`/var/log/uwsgi/supervisor_shop_pc_server.log` 和 `/var/log/uwsgi/supervisor_shop_pc_server_error.log`,否则启动会报错
 
 supervisor 部分命令
-```shell script
+```shell
 sudo supervisord -c shop_pc_server.conf  # 加载配置文件，启动 supervisor、
 sudo supervisorctl reload # 重新启动配置中的所有程序
 sudo supervisorctl status # 查看现在运行的supervisor进程的状态
@@ -119,7 +120,7 @@ sudo supervisorctl shutdown # 会关闭supervisor进程和其管理的子进程
 
 随便新建个以 $\color{red}{.conf}$ 结尾的文件， `xxx.conf`
 
-```shell script
+```shell
 server {
      listen 80;
      # 这里配置了一个虚拟主机，当不同二级域名 xx.ailemong.com 访问的时候，就可以做不同的映射
@@ -137,7 +138,7 @@ server {
 > 原因就是 socket 和 http 使用的协议不一样， uwsgi_pass 和 proxy_pass 就是分别对应的 socket和http协议
 
 nginx 部分命令
-```shell script
+```shell
 sudo service nginx stop
 sudo service nginx start
 sudo service nginx restart
