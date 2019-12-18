@@ -30,7 +30,10 @@ rm -r my_python # 删除环境直接把目录删了就好了，Linux 万物皆�
 ```
 
 ## 安装 uwsgi
-`source /path/to/env/bin activate`进入虚拟环境，`pip install uwsgi`
+
+`pip install uwsgi`
+
+进入虚拟环境 `source /path/to/env/bin activate`
 
 ## 安装 nginx
 `sudo apt install nginx`
@@ -85,10 +88,6 @@ post-buffering = 8192
 
 ### supervisor 配置
 > supervisor 配置文件的地址默认是在 `/etc/supervisor/conf.d`
-
-新建文件 `shop_pc_server.conf `
-
-user 处是因为我的用户名是 ubuntu，万恶的腾讯云
 
 ```shell
 
