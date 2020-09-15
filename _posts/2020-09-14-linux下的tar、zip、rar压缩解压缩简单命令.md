@@ -54,8 +54,8 @@ unrar x test.ra
 ### 示例：
 ```
 # 压缩文件
-zip -r test.zip file
+zip -r test.zip file # test.zip 压缩后的结果 file 是待压缩文件
 # 解压文件
-zip test.zip
+unzip test.zip
 ```
 
