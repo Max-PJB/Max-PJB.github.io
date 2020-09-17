@@ -167,7 +167,7 @@ sidebar:
 #    class: 'fa fa-weixin fa-fw'
   - title: pengjianbiao@hotmail.com # email
     href: mailto:pengjianbiao@hotmail.com
-    class: 'fa fa-envelope fa-fw'
+    klass: 'fa fa-envelope fa-fw'
   - title: github # email
     href: //github.com/JackyPJB
     class: 'fa fa-github fa-fw'
