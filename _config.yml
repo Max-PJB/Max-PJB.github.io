@@ -141,11 +141,9 @@ PrismJS: # 代码高亮插件，可以在https://prismjs.com/download.html自己
         enable: true
         innerHTML: 选中这段代码？
 
-katex: # KaTeX
+mathjax: # MathJax
   enable: true
-  stylesheet: //cdn.jsdelivr.net/npm/katex/dist/katex.min.css
-  src: //cdn.jsdelivr.net/npm/katex/dist/katex.min.js
-  auto-render: //cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js
+  src: //cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
   delimiters: true # 开启行内公式$\KaTeX$支持
 
 baidu-push: true
