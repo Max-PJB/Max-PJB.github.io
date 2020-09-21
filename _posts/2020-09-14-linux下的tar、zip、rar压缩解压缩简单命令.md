@@ -8,7 +8,7 @@ tags:
   - rar
 ---
 
-# linux下的tar、zip、rar压缩解压缩
+# linux下的tar、zip、rar、bz2压缩解压缩
 
 ## 1. tar 命令
 语法： tar [主选项 + 辅选项] 文件或目录
@@ -59,3 +59,20 @@ zip -r test.zip file # test.zip 压缩后的结果 file 是待压缩文件
 unzip test.zip
 ```
 
+## 4. tar.bz2 解压缩
+
+> `.bz2`结尾的文件是`bzip2`压缩的结果。
+
+> `tar`命令使用`-j`这个参数来调用gzip压缩或者解压缩`.tar.bz2`。
+
+- 压缩
+
+```bash
+$ tar -cjf images.tar.bz2 ./images/
+```
+
+- 解压缩
+
+```bash
+ tar -xjf images.tar.bz2
+```
