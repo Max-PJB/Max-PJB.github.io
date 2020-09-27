@@ -1,5 +1,5 @@
 ---
-title: 2020-09-22-ubuntu18安装nodejs v14.11配置阿里源，picGo-core，配置typora实现github图床,并使用 jsDelivr CDN加速
+title: ubuntu18安装nodejs v14.11配置阿里源，picGo-core，配置typora实现github图床,并使用 jsDelivr CDN加速
 categories:
   - ubuntu
 tags:

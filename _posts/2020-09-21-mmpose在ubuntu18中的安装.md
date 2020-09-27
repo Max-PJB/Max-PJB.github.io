@@ -1,5 +1,5 @@
 ---
-title: 2020-09-21-mmpose在ubuntu18中的安装
+title: mmpose在ubuntu18中的安装
 categories:
   - human pose
 tags:

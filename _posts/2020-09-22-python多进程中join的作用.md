@@ -1,5 +1,5 @@
 ---
-title: 2020-09-22-python多进程中join的作用
+title: python多进程中join的作用
 categories:
   - python
 tags:

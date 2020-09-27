@@ -1,5 +1,5 @@
 ---
-title: 2020-09-25-ubunt18安装ros-melodic
+title: ubunt18安装ros-melodic
 categories:
   - ros
 tags:
