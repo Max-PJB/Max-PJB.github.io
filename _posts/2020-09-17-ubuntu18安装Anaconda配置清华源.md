@@ -26,6 +26,8 @@ ubuntu 用户：
 
 `vim ~/.condarc`
 
+> 如果没有这个文件，就 `conda config --set show_channel_urls yes` 生成一下
+
 然后复制下面的内容替换 `.condarc` 里面的所有内容：
 
 ```bash
