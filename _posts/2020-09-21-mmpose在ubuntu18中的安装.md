@@ -68,12 +68,22 @@ mmdet 是 [mmdetection](https://developer.nvidia.com/cuda-downloads?target_os=Li
 
 它需要 mmcv pytorch cuda 等环境，我们前面已经安装了。
 
-~~~
+~~~bash
 git clone https://github.com/open-mmlab/mmdetection.git
 cd mmdetection
 pip install -r requirements/build.txt
 pip install -v -e .  # or "python setup.py develop"
 ~~~
+
+### 3.4 ubuntu18 需要 pytest
+
+```
+# ubuntu18 需要安装 pytest-runner 和 升级 pytest
+pip instal --upgrade pytest
+pip install pytest-runner
+```
+
+
 
 ## 4 下载测试数据集
 
