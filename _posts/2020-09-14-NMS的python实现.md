@@ -253,16 +253,16 @@ keep = nms(boxes,scores,iou_threshold)
 #通过下列操作即可获取具体nms后的boxes
 boxes = boxes[keep]
 
-‘‘‘
+​```
 参数：
 boxes (Tensor[N, 4])) – bounding boxes坐标. 格式：(x1, y1, x2, y2)
 
 scores (Tensor[N]) – bounding boxes得分
 
 iou_threshold (float) – IoU过滤阈值
-’’’
+​```
 ```
 
-[^ 1 ]: [目标检测-IOU和NMS计算](https://blog.csdn.net/qq_35268841/article/details/107526707?utm_medium=distribute.pc_relevant.none-task-blog-title-2&spm=1001.2101.3001.4242)
+[^ 1]: [目标检测-IOU和NMS计算](https://blog.csdn.net/qq_35268841/article/details/107526707?utm_medium=distribute.pc_relevant.none-task-blog-title-2&spm=1001.2101.3001.4242)
 [^ 2]: [IOU计算及NMS计算](https://blog.csdn.net/chris_zhangrx/article/details/100736847)
 
