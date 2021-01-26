@@ -1,10 +1,65 @@
 ---
-title: xxx
+title: 使用bypy在命令行下操作百度云
 categories:
-  - xxx
+  - ubuntu
 tags:
-  - xxx
-  - xxx
-  - xxx
+  - ubuntu
+  - bypy
+  - 百度云
+  - 命令行
 ---
+
+# 使用bypy在命令行下操作百度云
+
+#### 一，安装依赖
+
+```shell
+pip install bypy
+pip install requests
+```
+
+#### 二，使用
+
+输入 `bypy info` 会出现一个地址：
+
+![image-20210126210822610](http://cdn.ailemong.com/2021-01-01/26/21-21-08-24.png)
+
+复制这个网址，随便在任何一个电脑的浏览器上输入。
+
+获取百度云的 Python 客户端访问授权权限。
+
+![image-20210126211008285](http://cdn.ailemong.com/2021-01-01/26/21-21-10-09.png)
+
+复制授权码，输入到命令行中，然后回车。等待~~~
+
+登陆成功，会显示网盘使用情况：
+
+```shell
+ubuntu@VM-0-9-ubuntu:~$ bypy info
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Baidu PCS currently gives totally WRONG MD5 hash for remote files, and I AM NOT GOING TO ADAPT TO IT!
+So it if doesn't work, install version '1.6.10' using the following command:
+pip install bypy==1.6.10
+Version 1.6.10 has a workaround for this.
+### Seeking maintainer fo this `bypy` project, if you are interested, please create an issue at github, thanks. ###
+----------------------------------------------------------------
+百度云盘返回的MD5全错了，鬼知道他们什么时候会改回来！现在代码是按照MD5值是正确的前提来写的，不会改。
+所以你发现比较功能等不能正确工作时，请安装 1.6.10 版本：
+pip install bypy==1.6.10
+1.6.10版有个临时解决方案。
+### 寻求这个`bypy`项目维护者，有意的话请去github上建issue，谢谢。###
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+Quota: 6.015TB
+Used: 4.518TB
+```
+
+![image-20210126211427583](http://cdn.ailemong.com/2021-01-01/26/21-21-14-28.png)
+
+上传文件使用命令 `upload`， 例如：
+
+`bypy upload haha.zip`
 
