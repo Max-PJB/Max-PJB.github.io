@@ -84,7 +84,7 @@ Deleting original file Flutter Crash Course for Beginners 2020 - Build a Flutter
 
 1. 遇到 `You have requested multiple formats but ffmpeg or avconv are not installed. The formats won't be merged.`
 
-   ​       这是因为没有安装 *ffmpeg* 安装就好
+   ​       这是因为没有安装 *ffmpeg*，安装就好
 
 2.  -[] 
 
