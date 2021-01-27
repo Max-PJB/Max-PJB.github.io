@@ -34,6 +34,14 @@ tar -ztvf test.tar.gz
 >
 >-x : 从压缩包中解出文件
 
+### 加密压缩
+
+ `tar -czvf - file1 file2 flod1 |openssl des3 -salt -k 811811 -out data.tar.gz`
+
+### 解密解压
+
+`openssl des3 -d -k 811811 -salt -in  data.tar.gz | tar xzf -`
+
 
 ## 2. rar 命令
 ### 示例
