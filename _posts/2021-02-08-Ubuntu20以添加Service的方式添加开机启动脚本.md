@@ -18,7 +18,7 @@ tags:
 
 ### 一，新建一个 `test.service`
 
-在 `/lib/systemd/system/` 下，新建一个文件 `test.service`
+在 `/lib/systemd/system/` 下，新建一个文件 `test.service` 这个配置文件最好自己手输入一下，我直接复制进去会提示出错，估计是编码的问题。
 
 ```shell
 # 新建 service 文件
@@ -27,8 +27,8 @@ sudo vim /lib/systemd/system/test.service
 
 [Unit]
 Description=test
-Requires=network-online.target #若需要联网后启动的话，则需要加入该参数
-After=network-online.target #若需要联网后启动的话，则需要加入该参数
+#若需要联网后启动的话，则需要加入该参数
+After=network.target 
 
 [Service]
 Type=forking
