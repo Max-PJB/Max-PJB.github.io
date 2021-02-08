@@ -50,15 +50,15 @@ echo `date`,"ok" >>/tmp/test.log
 
 赋予脚本执行权限，路径根据实际情况对应修改。
 
-`chmod +x /path/to/test.sh` 
+`sudo chmod +x /path/to/test.sh` 
 
 ### 三，启动服务，设置开机启动
 
-`systemctl enable test.service`
+`sudo systemctl enable test.service`
 
 查看启动状态：
 
-`systemctl status test.service`
+`sudo systemctl status test.service`
 
 ## 四，service 文件参数说明
 
