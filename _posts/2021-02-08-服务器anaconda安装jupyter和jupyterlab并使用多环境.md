@@ -100,7 +100,7 @@ jupyter notebook
 
 可以通过 http://localhost:8888/lab 访问以下，至此，默认环境的 notebook 和 lab 就安装好了。
 
-![image-20210210185615240](/public/img/image-20210210185615240.png)
+![](/public/img)/image-20210210185615240.png)
 
 ![](https://github.com/Max-PJB/Max-PJB.github.io/tree/master/public/img)/image-20210210185615240.png)
 
