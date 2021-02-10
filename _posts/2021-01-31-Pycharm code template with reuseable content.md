@@ -27,7 +27,7 @@ References:
 -------------------------------------------------
 
     @   Author  :       pengjb
-    @   date    :       ${DATE}
+    @   date    :       ${DATE} ${TIME}
     @   IDE     :       PyCharm
     @   GitHub  :       https://github.com/JackyPJB
     @   Contact :       pengjianbiao@hotmail.com
