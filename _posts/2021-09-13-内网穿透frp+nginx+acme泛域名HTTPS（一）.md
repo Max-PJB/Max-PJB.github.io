@@ -1,9 +1,10 @@
 ---
-title: 内网穿透frp+acme泛域名HTTPS（一）
+title: 内网穿透frp+nginx+acme泛域名HTTPS（一）
 categories:
   - frp
 tags:
   - frp
+  - nginx
   - 内网穿透
   - 泛域名
   - HTTPS
