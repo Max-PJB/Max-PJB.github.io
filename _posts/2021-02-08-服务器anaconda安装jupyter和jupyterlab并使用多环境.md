@@ -16,14 +16,14 @@ tags:
 将要安装或启用的功能有：
 
 - [x] 远程访问
-
 - [ ] Tensorboard支持
-
 - [x] 多虚拟环境(Kernel)支持
-
 - [x] 后台运行
-
 - [x] jupyter lab
+
+> linux 安装 `conda` 的就是在 [anaconda 下载地址](https://links.jianshu.com/go?to=https%3A%2F%2Fwww.anaconda.com%2Fproducts%2Findividual%23linux) 下载 `Anaconda3-x.x.x-Linux-x86_64.sh` 安装包
+>
+> 然后一行命令安装 `bash Anaconda3-x.x.x-Linux-x86_64.sh`
 
 ### 一，安装 *jupyterlab*
 
@@ -31,7 +31,7 @@ anaconda 默认是安装了 *jupyter notebook* 的，所以我们这里只需要
 
 ```shell
 # 安装 jupyterlab
-codna install jupyterlab
+conda install jupyterlab
 # 生成配置文件 jupyter_notebook_config.py
 jupyter notebook --generate-config
 
