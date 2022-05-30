@@ -42,7 +42,8 @@ rm -r my_python # 删除环境直接把目录删了就好了，Linux 万物皆�
 `sudo apt-get install supervisor`
 
 ## 配置
-### flaks 项目目录
+### flask 项目目录
+
 > 我这里是以 create_app() 来写的 flask 应用，废话不多说，看图
 
 `/app/init.py`
@@ -115,6 +116,7 @@ sudo supervisorctl shutdown # 会关闭supervisor进程和其管理的子进程
 ```
 
 ### nginx 配置
+
 > nginx 配置文件的地址默认是在 `/etc/nginx/conf.d`
 
 随便新建个以 $\color{red}{.conf}$ 结尾的文件， `xxx.conf`
@@ -143,3 +145,8 @@ sudo service nginx start
 sudo service nginx restart
 sudo nginx -s reload
 ```
+
+> 更多supervisor的配置请查看 [官网](http://supervisord.org/) 或者 [博客](https://www.jianshu.com/p/868dbe9d40f5)
+
+
+
